@@ -1,0 +1,93 @@
+{
+   "ID": "",
+   "Name": "Grafana-Demo",
+   "Version": "1",
+   "Description": "Grafana-Demo / created by www.monitoringartist.com",
+   "Services": [
+     {
+       "Name": "Grafana-Demo",
+       "Title": "Grafana-Demo",
+       "Version": "1",
+       "Command": "/run.sh",
+       "Description": "Grafana-Demo / created by www.monitoringartist.com",
+       "Tags": null,
+       "ImageID": "monitoringartist/zenoss5grafana2demo:latest",
+       "Instances": {
+         "Min": 1,
+         "Max": 1,
+         "Default": 1
+       },
+       "ChangeOptions": null,
+       "Launch": "auto",
+       "HostPolicy": "",
+       "Hostname": "",
+       "Privileged": false,
+       "ConfigFiles": {},       
+       "Context": null,
+       "Endpoints": [
+         {
+           "Name": "nginx",
+           "Purpose": "export",
+           "Protocol": "tcp",
+           "PortNumber": 80,
+           "PortTemplate": "",
+           "VirtualAddress": "",
+           "Application": "Ngnix",
+           "ApplicationTemplate": "",
+           "AddressConfig": {
+             "Port": 0,
+             "Protocol": ""
+           },
+           "VHosts": [
+             "grafana-demo"
+           ]
+         }                  
+       ],
+       "Services": [],
+       "Tasks": null,
+       "LogFilters": null,
+       "Volumes":null,
+       "LogConfigs": null,
+       "Snapshot": {
+         "Pause": "",
+         "Resume": ""
+       },
+       "RAMCommitment": "64M",
+       "CPUCommitment": 1,
+       "Runs": null,
+       "Actions": null,
+       "HealthChecks": {
+           "health": {
+               "Script": "curl -o /dev/null -f -s 'http://127.0.0.1:80/'",
+               "Interval": 10,
+               "Timeout": 10
+           }
+       },       
+       "Prereqs": null,
+       "MonitoringProfile": {
+         "MetricConfigs": null,
+         "GraphConfigs": null,
+         "ThresholdConfigs": null
+       },
+       "MemoryLimit": 0,
+       "CPUShares": 0,
+       "PIDFile": ""
+     }
+   ],
+   "ConfigFiles": null,
+   "ServicedVersion": {
+     "Version": "1.0.7",
+     "Date": "Sat Oct 24 15:30:13 UTC 2015",
+     "Gitbranch": "HEAD",
+     "Gitcommit": "9141bcd-dirty",
+     "Giturl": "",
+     "Buildtag": "0",
+     "Release": "1.0.7-1"
+   },
+   "TemplateVersion": {
+     "branch": "unknown",
+     "commit": "unknown",
+     "repo": "unknown",
+     "tag": "unknown"
+   }
+}
