@@ -8,7 +8,7 @@
        "Name": "Grafana-Demo",
        "Title": "Grafana-Demo",
        "Version": "1",
-       "Command": "/run.sh",
+       "Command": "nginx -g 'daemon off;'",
        "Description": "Grafana-Demo / created by www.monitoringartist.com",
        "Tags": null,
        "ImageID": "monitoringartist/zenoss5grafana2demo:latest",
@@ -26,13 +26,13 @@
        "Context": null,
        "Endpoints": [
          {
-           "Name": "nginx",
+           "Name": "grafana",
            "Purpose": "export",
            "Protocol": "tcp",
            "PortNumber": 80,
            "PortTemplate": "",
            "VirtualAddress": "",
-           "Application": "Ngnix",
+           "Application": "Grafana",
            "ApplicationTemplate": "",
            "AddressConfig": {
              "Port": 0,
